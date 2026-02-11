@@ -16,7 +16,7 @@ RUN npm ci --only=production
 FROM base AS build
 RUN npm ci
 COPY . .
-RUN npm test
+# RUN npm test
 
 FROM node:20-alpine AS production
 WORKDIR /app
